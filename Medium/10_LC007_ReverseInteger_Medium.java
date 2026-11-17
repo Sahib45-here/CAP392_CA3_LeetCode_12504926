@@ -5,12 +5,7 @@ class Solution {
         while (x != 0) {
             int digit = x % 10;
             rev = rev * 10 + digit;
-            x /= 10;
-            
-            // Check for 32-bit integer overflow
-            if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE) {
-                return 0;
-            }
+            x /= 10;  
         }
         
         return (int) rev;
